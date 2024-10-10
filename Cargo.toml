@@ -1,0 +1,11 @@
+[package]
+name = "twain-rs"
+version = "0.1.0"
+authors = ["Jack Tubbenhauer <jack@tubbs.dev>"]
+edition = "2021"
+
+[dependencies]
+dlopen = "0.1.8"
+
+[build-dependencies]
+bindgen = "0.70.1"
