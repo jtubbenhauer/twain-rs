@@ -2,10 +2,12 @@
 #![allow(non_camel_case_types)]
 #![allow(non_snake_case)]
 
-include!(concat!(env!("OUT_DIR"), "/bindings.rs"));
+mod twain_dsm;
 
-pub fn add(left: u64, right: u64) -> u64 {
-    left + right
+pub use twain_dsm::TwainDsm;
+
+fn main<'a>() -> &'a str {
+    "Hello world"
 }
 
 #[cfg(test)]
@@ -14,7 +16,6 @@ mod tests {
 
     #[test]
     fn it_works() {
-        let result = add(2, 2);
-        assert_eq!(result, 4);
+        assert_eq!("Hello world", main())
     }
 }
